@@ -6,7 +6,6 @@ from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.retrievers.document_compressors import LLMChainExtractor
-
 from langchain.chains.question_answering import load_qa_chain
 from langchain.chains import RetrievalQA
 from langchain.retrievers import ContextualCompressionRetriever
@@ -27,7 +26,8 @@ st.sidebar.title("Replicate_API")
 st.sidebar.text("Login to Replicate and copy Api token of replicate")
 user_api = st.sidebar.text_input("Enter Text")
 
-os.environ['REPLICATE_API_TOKEN'] = f"{user_api}"
+os.environ['REPLICATE_API_TOKEN'] = str(user_api)
+
 from pypdf import PdfReader
 
 directory = "stocks"
