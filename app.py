@@ -5,7 +5,6 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import DirectoryLoader
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_community.vectorstores import Chroma
-import chromadb
 from langchain.retrievers.document_compressors import LLMChainExtractor
 
 from langchain.chains.question_answering import load_qa_chain
