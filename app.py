@@ -9,6 +9,7 @@ from langchain.retrievers.document_compressors import LLMChainExtractor
 from langchain.chains.question_answering import load_qa_chain
 from langchain.chains import RetrievalQA
 from langchain.retrievers import ContextualCompressionRetriever
+import chromadb
 
 import os
 st.title("Chat with stocks of Apple and Meta")
