@@ -26,7 +26,7 @@ st.sidebar.title("Replicate_API")
 st.sidebar.text("Login to Replicate and copy Api token of replicate")
 user_api = st.sidebar.text_input("Enter Text")
 
-os.environ['REPLICATE_API_TOKEN'] = str(user_api)
+REPLICATE_API_TOKEN = user_api
 
 from pypdf import PdfReader
 
